@@ -1,0 +1,312 @@
+body
+{
+	background-color: #2F3336;
+	color: #efefef;
+  font-size: 14px;
+  font-family: "Courier";
+  margin-bottom: 0;
+}
+.slidecontainer {
+  width: 100%;
+}
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+} 
+.slider:hover {
+  opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+.napis
+{
+  width:1000px; text-align: center;font-size: 30px;
+}
+.key
+{
+  width: 100px; height: 100px; float: left;
+}
+.img
+{
+   width: 100px; height: 100px; float: left; margin-right: 60px;
+}
+.video
+{
+  width: 360px;margin-left: auto;margin-right: auto
+}
+.wzor
+{
+  float: left; width: 100px;padding-top: 200px; text-align: center;
+}
+.info_o_grze
+{
+  width: 260px;margin-left: auto;margin-right: auto;
+}
+.button
+{
+  float: left; 
+  border-radius: 5px;
+  background-color: #358d8d;
+  width: 150px;
+  height: 50px;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 20px;
+}
+#timer
+{
+  float: left; 
+  border-radius: 5px;
+  background-color: #76e953;
+  width: 250px;
+  height: 35px;
+  padding-top: 15px;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.button:hover
+{
+  opacity: 0.8;
+}
+#buttons
+{
+  width: 540px;margin-left: auto;margin-right: auto
+}
+.parameters_x
+{
+  width:52.5%;
+  float: left;
+}
+.parameters_y
+{
+  width:47.5%;
+  float: left;
+}
+#velocity_rick_x
+{
+  width: 92%; 
+  float: left;
+}
+#velocity_morty_x
+{
+  width: 92%; 
+  float: left;
+}
+#velocity_rick_y
+{
+  width: 100%; 
+  margin-bottom: 24px;
+  float: left;
+}
+#velocity_morty_y
+{
+  width: 100%; 
+  float: left;
+}
+#frequency
+{
+  width: 190.5%;
+}
+#options
+{
+  width: 30%;
+  padding: 5%;
+  float: left;
+}
+#canvas
+{
+    background: #dddddd;
+    border-radius: 10px;
+    border: thin inset #aaaaaa;
+    width: 900px;
+    height: 400px;
+    float: left;
+}
+.f_counter
+{
+  float: left; 
+  width: 195px;
+}
+.f_name
+{
+  margin-top: 0;
+  height: 50px; 
+  text-align: center;
+  font-size: 15px;
+}
+.rick
+{
+  width: 5%;
+  height: 5%;
+  margin-left: 1%;
+  margin-right: 1%;
+  float: left;
+}
+.rotated-image {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+#kierunek1
+{
+  width: 5%;
+  height: 5%;
+  margin-left: 1%;
+  float: left;
+}
+#kierunek2
+{
+  width: 5%;
+  height: 5%;
+  margin-left: 1%;
+  float: left;
+}
+#content
+{
+  margin-top: 25px;
+}
+.content_
+{
+  width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: justify;
+	padding-top: 70px;
+	padding-bottom: 80px;
+	margin-bottom: 400px;
+  display: none;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.canvases
+{
+  background: #dddddd;
+  border: thin inset #aaaaaa;
+  width: 100px;
+  margin-left: 50px;
+  height: 430px;
+  border-radius: 10px;
+}
+.info
+{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding: 20px;
+  font-size: 20px;
+  margin-bottom: 70px;
+}
+
+.wrapper
+{
+	width: 100%;
+}
+
+.header
+{
+	width:100%;
+	padding: 40px 0;
+}
+
+.logo
+{
+	width: 605px;
+	font-size: 48px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.nav
+{ 
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #855086;
+	text-align: center;
+}
+
+.content
+{
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: justify;
+	padding-top: 40px;
+	padding-bottom: 80px;
+	margin-bottom: 400px;
+}
+
+.sticky
+{
+	position: fixed;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+	z-index: 100;
+}
+table
+{
+	margin-top:60px;
+}
+
+ol
+{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-size: 18px;
+	height: 60px;
+	display: inline-block;
+  box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.05) inset, 4px 8px 8px rgba(236, 82, 82, 0.6);
+}
+
+.head_button
+{
+  color: #ffffff;
+	text-decoration: none;
+	display: block;
+	padding: 20px 0;
+	height: 25px;
+}
+
+ol > li
+{
+	float: left;
+	width: 250px;
+}
+
+
+
+ol > li:hover
+{
+	background-color: #cf6969;
+	height: 61px;
+}
+
+ol > li:hover > a
+{
+	color: #451717;
+}

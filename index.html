@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="Symulator efektu Dooplera">
+	<meta name="keywords" content="fra, efekt, doopler">
+	<meta name="author" content="Tomasz Szkaradek">
+	<title>Efekt Dooplera</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="script.js" ></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+</head>
+<body onload="change('content1');">
+	<header>
+		<div class="logo">
+			<h2>Efekt Dooplera</h2>
+		</div>
+	</header>
+	<nav class="nav">
+		<ol>
+			<li onclick="change('content1');"><span class="head_button">Strona informacyjna</span></li>
+			<li onclick="change('content2');"><span class="head_button">Działanie symulacji</span></li>
+			<li onclick="change('content3');"><span class="head_button">Temat i teoria</span></li>
+			<li onclick="change('content4');"><span class="head_button">Symulacja</span></li>
+		</ol>
+	</nav>
+	<main>
+		<section>
+			<div class="content_" id="content1" style="display: block;" >
+				<h2>Strona informacyjna</h2>
+				Poniższa strona jest rozwiązaniem projektu nr 1 z przedmiotu Techniki Internetowe 2021.
+				Wykorzystane technologie:<br><br>
+				<div class="napis">Jezyk HTML5:</div><br>
+				Korzystając z elementów języka HTML wykonano szkielet strony wraz z odpowiednim formatowaniem treści. Wykorzystano elementy takie jak: header, nav, section, video, footer.
+				Przy użyciu elementu canvas wykonano przedstawienie graficzne symulacji.<br><br>
+				<div class="napis">CSS:</div><br>
+				Wygląd naszej storny został zapisany za pomocą CSS<br><br>
+				<div class="napis">Jezyk JavaScript:</div><br>
+				Do modyfikacji dokumentu HTML5 posłużono się elementami języka JavaScript i funkcjami takimi jak: getElementById oraz innerHTML.<br>
+				Funkcje on... umożliwiły obsługę zdarzeń, a operacje na własnościach styli: style.display : none/block umożliwia odpowiednią nawigacjie po stronie <br>
+				Wykorzystano także elementy biblioteki jquery do uzyskania efektu "przyklejenia" nawigacji.<br>
+				Wykorzystano także technologię WebWorker aby zrobic timer naszej symulacji <br>
+			</div>
+		</section>
+		<section>
+			<div class="content_" id="content2">
+				<h2>Działanie symulacji</h2>
+				Czas działania probramu ustawiony jest do momentu gdy zródlo wysle ostatnia fale ktora miesci sie na canvasie reprezentującym wysyłane fale (~20s)<br>
+				Interfejs symulacji składa się z:
+				<ul>
+					<li>elementu canvas, umożliwiającego wyświetlanie symulacji</li>
+					<li>suwaki które umożliwiają nam zmiane prędkości każdego obiektu w pionie i poziomie do maksymalnie prędkości dźwięku</li>
+					<li>boczne canvasy które obrazuja kiedy sygnał został wyslany a kiedy odebrany zawiera też informacje o ich częstotliwościach </li>
+					</ul> 
+				Ruch podanego obiektu aktualizowana jest po zmianie dowolnego parametru na suwaku bądz po naciśnieciu odpowiednich klawisza<br>
+				Program umożliwia ci sterowanie obrazkiem "rick" za pomoca klawiszy:<br><br><br>
+				<div class="info_o_grze">
+					<img src="rick.png" class="img" alt="">
+					<img src="key1.png" class="key" alt="">
+					<div style="clear: both;"></div><br><br>
+				</div>
+				oraz "mortym" za pomoca klawiszy:<br><br><br>
+				<div class="info_o_grze">
+					<img src="morty.png" class="img" alt="">
+					<img src="key2.png" class="key" alt="">
+					<div style="clear: both;"></div><br><br>
+				</div>
+				klikajac na "ricka" badz "mortiego" zerujesz ich predkosci<br><br><br>
+				<div class="info_o_grze">
+					<img src="rick.png" class="img" alt="">
+					<img src="morty.png" class="key" alt="">
+					<div style="clear: both;"></div><br><br>
+				</div>
+				Program umożliwia ci także manipulowanie częstotliwością źródła [1Hz-3Hz]<br><br><br>
+				Natomiaste podane przyciski pomagają ci w kontrolowaniu aplikacji
+				(Wskazówka: pamietaj aby wyłączyc pauze gdy chcesz zresetować rozgrywke)<br><br><br>
+				<div id="buttons">
+					<input class="button" type="button" value="start"/>
+					<input class="button" type="button" value="pauza"/>
+					<input class="button" type="button" value="koniec"/>
+				</div><br><br><br><br>
+				Za prędkość fali w naszej symulacji przyjeliśmy prędkość dźwieku w powietrzu, w temperaturze 15 °C.<br>
+				Symulacja posiada także timer który mierzy czas działania programu wykonany za pomoca WebWorker.
+	
+			</div>
+		</section>
+		<section>
+			<div class="content_" id="content3">
+				<h2>Temat i teoria</h2>
+				Zjawisko Dopplera polega na zmianie długości (a więc i częstotliwości) fali, będącego wynikiem ruchu względnego nadajnika i odbiornika tej fali.
+				<br><br>
+				Na poniższym wideo przedstawiono falę wytworzoną przez źródło w przestrzeni dwuwymiarowej.
+				<br><br>
+				<div class="video">
+					<video width="360" height="300" controls>
+						<source src="audio.mp4" type="video/mp4">
+					</video>
+				</div>
+				<br><br>
+				Widać, że fala ma kształt kolisty i rozchodzi się równomiernie we wszystkich kierunkach, więc odległości pomiędzy powierzeniami falowymi wszędzie mają tą samą wartość równą długości fali (λ).
+				<br>
+				W przypadku nadajnika fali poruszającego się z prędkością (u) względem odbiornika w prawą stronę rysunek wygląda nieco inaczej:
+				<br><br>
+				<div class="video">
+					<img src="photo.png" style="width: 360px;height: 300px;" alt="">
+				</div>
+				<br><br>
+				W tym przypadku symetria nie jest zachowana. Odległości pomiędzy powierzchniami falowymi z prawej strony rysunku są mniejsze niż z lewej strony. Oznacza to, że jeżeli nadajnik fali zbliża się do odbiornika, ten rejestruje falę krótszą (o większej częstotliwości), aniżeli w przypadku, gdy wypadkowa prędkość nadajnika i odbiornika była równa zero. Natomiast jeżeli nadajnik oddala się od odbiornika, ten rejestruje falę dłuższą, a więc falę o mniejszej częstotliwości.
+				<br>
+				Równanie na zmienioną w wyniku efektu Dopplera częstotliwość fali można zapisać następująco:
+				<br><br>
+				$$f' = f(\frac{v\pm v_O}{v\mp v_Z})$$
+				<br><br>
+				gdzie: <br>
+				f’ – częstotliwość fali zmieniona w wyniku efektu Dopplera, <br>
+				f – częstotliwość pierwotna (wydawana przez nie poruszające się źródło fali), <br>
+				v – prędkość rozchodzenia się fali w danym ośrodku, <br>
+				u – względna prędkość nadajnika i odbiornika.<br>
+				<br>
+				Równanie ze znakiem (+) należy stosować w przypadku, gdy nadajnik i odbiornik oddalają się od siebie, natomiast znak (–), gdy  się przybliżają.
+				<br>
+				Zjawisko Dopplera wykorzystywane jest m.in. w radarach do pomiaru prędkości pojazdów, w medycynie do pomiaru prędkości przepływu krwi w organizmie, astronomii do pomiaru prędkości ruchu ciał niebieskich.
+			</div>
+		</section>
+		<section>
+			<div class="content_" id="content4"  style="width: 100%;">
+				<h2 style="width: 1000px;margin-left: auto;margin-right: auto;">Symulacja</h2>
+				<div class="parameters_x" style="margin-top:45px;" >
+					<span id='vz_x'>Predkosc zrodla: 0 [m/s]</span><br>
+					<input type="range" min="-339" max="339" value="0" class="slider" id="velocity_rick_x" onclick="update('velocity_rick_x')"><img src="rick.png" class="rick" alt="" onclick="zero('velocity_rick')">
+					<br><br><span id='vo_x'>Predkosc odbiornika: 0 [m/s]</span><br>
+					<input type="range" min="-339" max="339" value="0" class="slider" id="velocity_morty_x" onclick="update('velocity_morty_x')"><img src="morty.png" class="rick" alt="" onclick="zero('velocity_morty')">
+					<div style="clear: both;"></div>
+					<span id='f'>Czestotliwosc: 1 [Hz]</span><br>
+					<input type="range" min="100" max="300" value="100" class="slider" id="frequency" onclick="update('frequency')">
+				</div>
+				<br>
+				<br>
+				<div class="parameters_y" style="margin-top:0;">
+					<span id='vz_y'>Predkosc zrodla: 0 [m/s]</span><br>
+					<input type="range" min="-339" max="339" value="0" class="slider" id="velocity_rick_y" onclick="update('velocity_rick_y')"><br>
+					<span id='vo_y'>Predkosc odbiornika: 0 [m/s]</span><br>
+					<input type="range" min="-339" max="339" value="0" class="slider" id="velocity_morty_y" onclick="update('velocity_morty_y')">
+					<div style="clear: both;"></div>
+				</div>
+				<div style="clear: both;"></div>
+				<div id="content">
+					<div style="width: 900px; height: 600px;float: left;margin-right: 50px;">
+						<div style="width: 900px; height: 400px; float: left;margin-left: 30px;">
+							<canvas id='canvas' width='900' height='400'></canvas>
+						</div>
+						
+						<div style="width: 820px; height: 100px; float: left;margin-left: 80px; margin-top: 30px;">
+							<input class="button" id="start" type="button" value="start" onclick="start()"/>
+							<input class="button" id="pauza/kontynuacja" type="button" value="pauza" onclick="check()"/>
+							<input class="button" id="koniec" type="button" value="koniec"/>
+							<div id="timer">Czas: 00:00</div>
+						</div>
+						
+					</div>
+					
+					<div class="f_counter" >
+						<div id='f_z' class="f_name">Sygnal jaki wysyla Rick Sanchez 1 [Hz]</div>
+						<canvas id='canvas1' class='canvases' width='80' height='400'></canvas>
+					</div>
+					<div class="wzor" >
+						$$f' = f(\frac{v\pm v_O}{v\mp v_Z})$$
+					</div>
+					<div class="f_counter" >
+						<div id='f_o' class="f_name">Sygnal jaki odbiera Morty Smith 1 [Hz]</div>
+						<canvas id='canvas2' class='canvases' width='80' height='400'></canvas>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+			</div>	
+		</section>
+	</main>
+	<footer>
+		<div class="info">
+			Wszelkie prawa zastrzezone &copy; Techniki Internetowe 2021 Tomasz Szkaradek!
+		</div>
+	</footer>
+
+	<script src="jquery-1.11.3.min.js"></script>
+
+</body>
+</html>

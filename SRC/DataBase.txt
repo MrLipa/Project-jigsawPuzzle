@@ -1,0 +1,17 @@
+James Lipa 8 8 0 10 4 720
+Hedwiga Koala 3 3 0 1 20 28
+Lily Penguins 3 3 0 1 25 96
+Ginny Lipa 5 5 0 4 21 240
+Lucjusz Lipa 8 8 0 12 48 613
+Draco Penguins 10 10 0 30 28 922
+Harry Koala 3 3 0 1 33 12
+Hermiona Lipa 10 10 0 45 12 1044
+Ron Lipa 5 5 0 6 1 410
+Syriusz Penguins 8 8 0 7 8 402
+Zgredek Koala 5 5 0 5 1 301
+Severus Lipa 10 10 0 37 10 734
+Luna Koala 3 3 0 3 2 62
+Minerva Penguins 8 8 0 6 23 629
+Neville Penguins 10 10 1 0 4 1201
+Bellatriks Lipa 3 3 0 1 22 30
+Player Koala 3 3 0 1 47 108
